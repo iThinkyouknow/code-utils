@@ -19,7 +19,7 @@ const new_array = psalter_kv_array.map(([key, val], i) => {
 
 	const new_ref = (no_first_num_ref) ? no_first_num_ref.map((str) => {
 		const ref_match = str.match(/^\d+:(\d+)\s*\-\s*(.+)/);
-		// log('ref_match', ref_match);
+		
 		return {
 			v: ref_match[1],
 			refs: ref_match[2]
@@ -27,7 +27,7 @@ const new_array = psalter_kv_array.map(([key, val], i) => {
 	}) : undefined;
 
 	if (ref && i === 0) log(new_ref);
-	// const new_ref = [split_ref[0].replace(/^\d+/, ''), split_ref.slice(1)];
+	
 	return {
 		no: key_int,
 		title: title_name, 
