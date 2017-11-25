@@ -4,11 +4,6 @@ const {log} = console;
 
 const psalterJSON = require('~/Dropbox/iOS App dev/Test2/Test2/PsalterJson1.json');
 
-// const psalter = JSON.parse(psalterJSON);
-
-// console.log(psalterJSON[1]["content"].split('\n \n').map(s => s.split('\n')));
-// console.log(psalterJSON[1]["content"].split('\n \n').map(s => s.split('\n')));
-
 const psalter_kv_array = Object.entries(psalterJSON);
 
 const new_array = psalter_kv_array.map(([key, val], i) => {
@@ -48,5 +43,3 @@ const output = JSON.stringify(new_array, null, 4);
 log(output);
 
 fs.writeFileSync('~/Desktop/outputJson.json', output, 'utf-8');
-
-
